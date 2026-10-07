@@ -1,0 +1,230 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #e8f5e9;
+}
+
+a {
+    color: #17694a;
+}
+
+header {
+    padding: 35px 20px;
+    background-color: #17694a;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+nav {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #a5d6a7;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 12px;
+    color: #17694a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #17694a;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    color: #17694a;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #17694a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.info-details {
+    background-color: #f1f8e9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 5px solid #17694a;
+    margin-top: 15px;
+}
+
+.info-details p {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#hobbies p {
+    margin-bottom: 10px;
+}
+
+#hobbies ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#hobbies ul li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    color: #17694a;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 2px solid #a5d6a7;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #17694a;
+    color: white;
+    font-size: 1.1rem;
+}
+
+tbody tr {
+    background-color: #e8f5e9;
+    font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #c8e6c9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #17694a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #17694a;
+    box-shadow: 0 0 5px rgba(23, 105, 74, 0.3);
+}
+
+button[type="submit"] {
+    background-color: #17694a;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0f4631;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #17694a;
+    margin-top: 40px;
+}
+
+/* === KODE BARU UNTUK DESAIN RESPONSIF KETIKA DIBUKA DI LAPTOP === */
+@media (min-width: 768px) {
+    .content-grid {
+        flex-direction: row; /* Membuat kotak profil berjajar ke samping, bukan ke bawah */
+        align-items: flex-start;
+    }
+    
+    section {
+        flex: 1; /* Membagi ukuran kotak kiri dan kanan agar sama rata */
+    }
+}
